@@ -9,8 +9,8 @@ class Project extends Component {
 
         return  (
             <div>
-            <span>{this.formatAngka()}</span>
-            <button>Increase</button>
+            <span style={{fontSize: 20}} className="badge badge-danger m-2">{this.formatAngka()}</span>
+            <button className="btn btn-primary btn-sm">Increase</button>
             </div>
         
         );
