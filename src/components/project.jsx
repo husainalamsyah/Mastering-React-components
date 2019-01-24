@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 
 class Project extends Component {
+    state = {
+        angka: 3
+    };
+    
     render() {
 
         return  (
-            <React.Fragment>
-            <h1>Hello earth</h1>
+            <div>
+            <span>{this.formatAngka()}</span>
             <button>Increase</button>
-            </React.Fragment>
+            </div>
         
         );
+    }
+
+    formatAngka(){
+        const {angka} = this.state;
+        return angka === 3 ? 'Three' : angka;
     }
 }
  
