@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Project extends Component {
     state = {
-        angka: 1
+        angka: 3,
+        tags: ['tag1','tag2','tag3']
     };
     
     render() {
@@ -10,6 +11,9 @@ class Project extends Component {
             <div>
             <span style={{fontSize: 20}} className={this.getBadgeKelas()}> {this.formatAngka()}</span>
             <button className="btn btn-primary btn-sm">Increase</button>
+            <ul>
+                { this.state.tags.map(tag => <li key={tag}>{tag}</li>) }
+            </ul>
             </div>
         
         );
