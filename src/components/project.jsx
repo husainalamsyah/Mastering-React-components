@@ -12,7 +12,13 @@ class Project extends Component {
     //     return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
     // }
 
-    handleIncrease(){
+    
+    // constructor() {
+    //     super();
+    //     this.handleIncrease = this.handleIncrease.bind(this);
+    // }
+
+    handleIncrease = () => {
         console.log("Increase Clicked", this);
     }
     
