@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Project extends Component {
     state = {
-        angka: 3,
+        angka: 0,
         tags: []
     };
 
@@ -19,8 +19,8 @@ class Project extends Component {
     // }
 
     handleIncrease = () => {
-        console.log("Increase Clicked", this);
-    }
+        this.setState({angka: this.state.angka + 1})
+    };
     
     render() {
         return  (
@@ -28,7 +28,7 @@ class Project extends Component {
             <span style={{fontSize: 20}} className={this.getBadgeKelas()}> {this.formatAngka()}</span>
             <button 
             onClick={this.handleIncrease}
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary btn-lg"
             >
             Increase
             </button>
@@ -42,13 +42,13 @@ class Project extends Component {
 
     getBadgeKelas() {
         let classes = "badge m-2 badge-";
-        classes += this.state.angka === 3 ? "danger" : "warning";
+        classes += this.state.angka === 0 ? "danger" : "warning";
         return classes;
     }
 
     formatAngka(){
         const {angka} = this.state;
-        return angka === 3 ? 'Three' : angka;
+        return angka === 0 ? 'zero' : angka;
     }
 }
  
